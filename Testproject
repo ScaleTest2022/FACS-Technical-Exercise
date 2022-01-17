@@ -32,4 +32,259 @@ WebUI.verifyTextPresent('These credentials do not match our records.', false)
 
 WebUI.closeBrowser()
 
+//Selecting a project
+
+WebUI.openBrowser('')
+
+WebUI.navigateToUrl('https://apiqa.facsware.com/login')
+
+WebUI.setText(findTestObject('Object Repository/Page_FACS/input_Portal_portal'), 'qaqc')
+
+WebUI.setText(findTestObject('Object Repository/Page_FACS/input_E-Mail Address_email'), 'qacandidate@facsware.com')
+
+WebUI.setEncryptedText(findTestObject('Object Repository/Page_FACS/input_Password_password'), 'q4t3S7m$st3rFLe#')
+
+WebUI.click(findTestObject('Object Repository/Page_FACS/button_Login'))
+
+WebUI.click(findTestObject('Object Repository/Page_FACS/span_Portal'))
+
+WebUI.click(findTestObject('Object Repository/Page_FACS/div_Test Project'))
+
+WebUI.selectOptionByValue(findTestObject('Object Repository/Page_FACS/select_Portal                              _8fc93e'), 
+    '90', true)
+
+WebUI.closeBrowser()
+
+//Unselecting a project
+WebUI.openBrowser('')
+
+WebUI.navigateToUrl('https://apiqa.facsware.com/login')
+
+WebUI.setText(findTestObject('Object Repository/Page_FACS/input_Portal_portal'), 'qaqc')
+
+WebUI.setText(findTestObject('Object Repository/Page_FACS/input_E-Mail Address_email'), 'qacandidate@facsware.com')
+
+WebUI.setEncryptedText(findTestObject('Object Repository/Page_FACS/input_Password_password'), 'q4t3S7m$st3rFLe#')
+
+WebUI.click(findTestObject('Object Repository/Page_FACS/button_Login'))
+
+WebUI.click(findTestObject('Object Repository/Page_FACS/span_Portal'))
+
+WebUI.click(findTestObject('Object Repository/Page_FACS/div_Hilo Viaduct'))
+
+WebUI.selectOptionByValue(findTestObject('Object Repository/Page_FACS/select_Portal                              _8fc93e'), 
+    '16274', true)
+
+WebUI.click(findTestObject('Object Repository/Page_FACS/span_QAQC'))
+
+WebUI.verifyTextPresent('Projects', false)
+
+WebUI.closeBrowser()
+
+//Services
+
+WebUI.openBrowser('')
+
+WebUI.navigateToUrl('https://apiqa.facsware.com/login')
+
+WebUI.setText(findTestObject('Object Repository/Page_FACS/input_Portal_portal'), 'qaqc')
+
+WebUI.setText(findTestObject('Object Repository/Page_FACS/input_E-Mail Address_email'), 'qacandidate@facsware.com')
+
+WebUI.setEncryptedText(findTestObject('Object Repository/Page_FACS/input_Password_password'), 'q4t3S7m$st3rFLe#')
+
+WebUI.click(findTestObject('Object Repository/Page_FACS/button_Login'))
+
+WebUI.click(findTestObject('Object Repository/Page_FACS/div_Service'))
+
+WebUI.click(findTestObject('Object Repository/Page_FACS/a_Change Order'))
+
+WebUI.waitForPageLoad(0)
+
+WebUI.verifyTextPresent('Test Project', false)
+
+WebUI.closeBrowser()
+
+WebUI.openBrowser('')
+
+WebUI.navigateToUrl('https://apiqa.facsware.com/login')
+
+WebUI.setText(findTestObject('Object Repository/Page_FACS/input_Portal_portal'), 'qaqc')
+
+WebUI.setText(findTestObject('Object Repository/Page_FACS/input_E-Mail Address_email'), 'qacandidate@facsware.com')
+
+WebUI.setEncryptedText(findTestObject('Object Repository/Page_FACS/input_Password_password'), 'q4t3S7m$st3rFLe#')
+
+WebUI.click(findTestObject('Object Repository/Page_FACS/button_Login'))
+
+WebUI.click(findTestObject('Object Repository/Page_FACS/span_Portal'))
+
+WebUI.click(findTestObject('Object Repository/Page_FACS/div_Kauai Viaduct'))
+
+WebUI.selectOptionByValue(findTestObject('Object Repository/Page_FACS/select_Portal                              _8fc93e'), 
+    '16275', true)
+
+WebUI.click(findTestObject('Object Repository/Page_FACS/div_Service'))
+
+WebUI.click(findTestObject('Object Repository/Page_FACS/a_FileCabinet'))
+
+WebUI.waitForPageLoad(0)
+
+WebUI.verifyTextPresent('File Cabinet', false)
+
+WebUI.closeBrowser()
+
+
+//Creating/editing/delete an Entry
+WebUI.openBrowser('')
+
+WebUI.navigateToUrl('https://apiqa.facsware.com/login')
+
+WebUI.setText(findTestObject('Object Repository/Page_FACS/input_Portal_portal'), 'qaqc')
+
+WebUI.click(findTestObject('Object Repository/Page_FACS/div_Login                                  _5c3e76'))
+
+WebUI.setText(findTestObject('Object Repository/Page_FACS/input_E-Mail Address_email'), 'qacandidate@facsware.com')
+
+WebUI.click(findTestObject('Object Repository/Page_FACS/form_Portal                                _789bed'))
+
+WebUI.setEncryptedText(findTestObject('Object Repository/Page_FACS/input_Password_password'), 'q4t3S7m$st3rFLe#')
+
+WebUI.click(findTestObject('Object Repository/Page_FACS/button_Login'))
+
+WebUI.click(findTestObject('Object Repository/Page_FACS/span_Portal'))
+
+WebUI.click(findTestObject('Object Repository/Page_FACS/div_Kauai Viaduct'))
+
+WebUI.selectOptionByValue(findTestObject('Object Repository/Page_FACS/select_Portal                              _8fc93e'), 
+    '16275', true)
+
+WebUI.click(findTestObject('Object Repository/Page_FACS/div_Service'))
+
+WebUI.click(findTestObject('Object Repository/Page_FACS/a_Change Order'))
+
+WebUI.click(findTestObject('Object Repository/Page_FACS/span_New'))
+
+https://apiqa.facsware.com/16275/ChangeOrder/EntryFormService/1063610 = WebUI.getUrl()
+
+WebUI.waitForPageLoad(0)
+
+WebUI.setText(findTestObject('Object Repository/Page_FACS/input_Change Order No_entity_structure_109373'), 'new entry test')
+
+WebUI.setText(findTestObject('Object Repository/Page_FACS/textarea_Description_entity_structure_109411'), 'test')
+
+WebUI.click(findTestObject('Object Repository/Page_FACS/button_SUBMIT'))
+
+WebUI.click(findTestObject('Object Repository/Page_FACS/span_Kauai Viaduct'))
+
+WebUI.click(findTestObject('Object Repository/Page_FACS/div_Kauai Viaduct_1'))
+
+WebUI.selectOptionByValue(findTestObject('Object Repository/Page_FACS/select_Portal                              _8fc93e'), 
+    '16275', true)
+
+WebUI.closeBrowser()
+
+WebUI.openBrowser('')
+
+WebUI.navigateToUrl('https://apiqa.facsware.com/login')
+
+WebUI.setText(findTestObject('Object Repository/Page_FACS/input_Portal_portal'), 'qaqc')
+
+WebUI.setText(findTestObject('Object Repository/Page_FACS/input_E-Mail Address_email'), 'qacandidate@facsware.com')
+
+WebUI.setEncryptedText(findTestObject('Object Repository/Page_FACS/input_Password_password'), 'q4t3S7m$st3rFLe#')
+
+WebUI.click(findTestObject('Object Repository/Page_FACS/button_Login'))
+
+WebUI.click(findTestObject('Object Repository/Page_FACS/span_Portal'))
+
+WebUI.click(findTestObject('Object Repository/Page_FACS/div_Kauai Viaduct'))
+
+WebUI.selectOptionByValue(findTestObject('Object Repository/Page_FACS/select_Portal                              _8fc93e'), 
+    '16275', true)
+
+WebUI.click(findTestObject('Object Repository/Page_FACS/div_Service'))
+
+WebUI.click(findTestObject('Object Repository/Page_FACS/a_Change Order'))
+
+WebUI.click(findTestObject('Object Repository/Page_FACS/div_new entry test_ui-grid-cell-contents ng_af5e07'))
+
+WebUI.click(findTestObject('Object Repository/Page_FACS/button_Open'))
+
+WebUI.setText(findTestObject('Object Repository/Page_FACS/input_Change Order No_entity_structure_109373'), 'new entry testnew')
+
+WebUI.click(findTestObject('Object Repository/Page_FACS/div_Amount Changed_ui-grid-viewport ng-isol_755696'))
+
+WebUI.click(findTestObject('Object Repository/Page_FACS/button_SUBMIT'))
+
+WebUI.click(findTestObject('Object Repository/Page_FACS/div_Test Project_entry-form-service__header_fed3e7'))
+
+WebUI.click(findTestObject('Object Repository/Page_FACS/div_test_ui-grid-cell-contents ng-binding ng-scope'))
+
+WebUI.verifyTextPresent('new entry testnew', false)
+
+WebUI.click(findTestObject('Object Repository/Page_FACS/button_Delete'))
+
+WebUI.verifyTextNotPresent('new entry testnew', false)
+
+WebUI.closeBrowser()
+
+//Attach a File
+
+WebUI.openBrowser('')
+
+WebUI.navigateToUrl('https://apiqa.facsware.com/login')
+
+WebUI.setText(findTestObject('Object Repository/Page_FACS/input_Portal_portal'), 'qaqc')
+
+WebUI.setText(findTestObject('Object Repository/Page_FACS/input_E-Mail Address_email'), 'qacandidate@facsware.com')
+
+WebUI.setEncryptedText(findTestObject('Object Repository/Page_FACS/input_Password_password'), 'q4t3S7m$st3rFLe#')
+
+WebUI.click(findTestObject('Object Repository/Page_FACS/button_Login'))
+
+WebUI.click(findTestObject('Object Repository/Page_FACS/span_Portal'))
+
+WebUI.click(findTestObject('Object Repository/Page_FACS/div_Test Project'))
+
+WebUI.selectOptionByValue(findTestObject('Object Repository/Page_FACS/select_Portal                              _8fc93e'), 
+    '90', true)
+
+WebUI.click(findTestObject('Object Repository/Page_FACS/div_Service'))
+
+WebUI.click(findTestObject('Object Repository/Page_FACS/a_RFI'))
+
+WebUI.click(findTestObject('Object Repository/Page_FACS/button_New'))
+
+WebUI.setText(findTestObject('Object Repository/Page_FACS/input_RFI No_entity_structure_109143'), 'NEWRFI')
+
+WebUI.click(findTestObject('Object Repository/Page_FACS/span_New'))
+
+WebUI.click(findTestObject('Object Repository/Page_FACS/button_Browse'))
+
+WebUI.click(findTestObject('Object Repository/Page_FACS/span_Private_elfinder-navbar-arrow'))
+
+WebUI.click(findTestObject('Object Repository/Page_FACS/span_NewFolder 1'))
+
+WebUI.click(findTestObject('Object Repository/Page_FACS/span_NewFolder'))
+
+WebUI.click(findTestObject('Object Repository/Page_FACS/div_61a65048a4a31208981c0924.json'))
+
+WebUI.click(findTestObject('Object Repository/Page_FACS/button_Insert'))
+
+WebUI.setText(findTestObject('Object Repository/Page_FACS/input_Description_entity_structure_113745'), 'NEWRFI')
+
+WebUI.click(findTestObject('Object Repository/Page_FACS/input_Date_entity_structure_114464'))
+
+WebUI.click(findTestObject('Object Repository/Page_FACS/a_17'))
+
+WebUI.click(findTestObject('Object Repository/Page_FACS/button_Save'))
+
+WebUI.click(findTestObject('Object Repository/Page_FACS/span_View'))
+
+WebUI.click(findTestObject('Object Repository/Page_FACS/i_Bulk Edit_far fa-eye'))
+
+WebUI.closeBrowser()
+
+
 
