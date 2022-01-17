@@ -1,0 +1,35 @@
+
+//Logging in
+
+
+WebUI.openBrowser('')
+
+WebUI.navigateToUrl('https://apiqa.facsware.com/login')
+
+WebUI.setText(findTestObject('Object Repository/Page_FACS/input_Portal_portal'), 'qaqc')
+
+WebUI.setText(findTestObject('Object Repository/Page_FACS/input_E-Mail Address_email'), 'qacandidate@facsware.com')
+
+WebUI.setEncryptedText(findTestObject('Object Repository/Page_FACS/input_Password_password'), 'q4t3S7m$st3rFLe#')
+
+WebUI.click(findTestObject('Object Repository/Page_FACS/button_Login'))
+
+WebUI.closeBrowser()
+
+WebUI.openBrowser('')
+
+WebUI.navigateToUrl('https://apiqa.facsware.com/login')
+
+WebUI.setText(findTestObject('Object Repository/Page_FACS/input_Portal_portal'), 'qaqc')
+
+WebUI.setText(findTestObject('Object Repository/Page_FACS/input_E-Mail Address_email'), 'qacandidate@facsware.com')
+
+WebUI.setEncryptedText(findTestObject('Object Repository/Page_FACS/input_Password_password'), 'q4t3S7m$st3rFLe#t')
+
+WebUI.click(findTestObject('Object Repository/Page_FACS/button_Login'))
+
+WebUI.verifyTextPresent('These credentials do not match our records.', false)
+
+WebUI.closeBrowser()
+
+
